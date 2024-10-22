@@ -1,0 +1,51 @@
+<h4>Welcome To File Upload App</h4>
+<div class="container">
+    <h2 class="heading">Registration</h2>
+    <form action="">
+        <div class="mb-3">
+            <label for="user_id" class="form-label">Id</label>
+            <input 
+                type="text" 
+                name="id" 
+                id="user_id" 
+                class="form-control" 
+                [(ngModel)]="user.id"
+                placeholder="Enter id" 
+            />
+        </div>
+        <div class="mb-3">
+            <label for="user_name" class="form-label">Name</label>
+            <input 
+                type="text" 
+                name="name" 
+                id="user_name" 
+                class="form-control" 
+                [(ngModel)]="user.name"
+                placeholder="Enter Name" 
+            />
+        </div>
+        <div class="mb-3">
+            <label for="user_city" class="form-label">City</label>
+            <input 
+                type="text" 
+                name="city" 
+                id="user_city" 
+                class="form-control" 
+                [(ngModel)]="user.city"
+                placeholder="Enter City" 
+            />
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Select File</label>
+            <input 
+                type="file" 
+                id="formFile" 
+                class="form-control" 
+                (change)="onChangeFileField($event)" 
+            />
+        </div>
+        <div class="container text-center">
+            <button (click)="doRegister()" class="btn btn-success btn-sm">Submit</button>
+        </div>
+    </form>
+</div>
